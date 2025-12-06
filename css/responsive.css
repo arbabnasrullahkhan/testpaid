@@ -1,0 +1,225 @@
+/* =========================================
+   RESPONSIVE LAYOUT & MOBILE FIXES (Final)
+   ========================================= */
+
+/* --- 1. DESKTOP OVERRIDES (Ensure no conflicts) --- */
+@media screen and (min-width: 1025px) {
+    .mobile-dock { display: none !important; } /* Hide dock on PC */
+}
+
+/* --- 2. TABLET & SMALL LAPTOP (Max-width: 1024px) --- */
+@media screen and (max-width: 1024px) {
+    :root { --container: 95%; } /* Add some breathing room */
+    
+    .hero-title { font-size: 3rem; }
+    
+    /* Pricing: 2 Columns on Tablet */
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        display: grid; /* Reset grid for tablet */
+        overflow-x: visible;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+    .price-card.popular { transform: none; border-width: 1px; }
+    
+    /* Comparison Table: Horizontal Scroll */
+    .comparison-table { display: block; overflow-x: auto; white-space: nowrap; }
+    .table-header, .table-row { min-width: 600px; grid-template-columns: 200px 1fr 1fr; }
+    
+    /* Footer: 2 Columns on Tablet */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+/* --- 3. MOBILE DEVICES (Max-width: 768px) --- */
+@media screen and (max-width: 768px) {
+    
+    /* --- Typography & Layout --- */
+    html { font-size: 15px; }
+    .container { padding: 0 15px; }
+    
+    .hero-title { font-size: 2.2rem; padding: 0 5px; line-height: 1.2; }
+    .hero-desc { font-size: 1rem; padding: 0 10px; }
+    
+    /* --- Header --- */
+    .desktop-nav { display: none; } /* Hide Desktop Menu */
+    .desktop-qr-trigger { display: none; } /* Hide QR */
+    .header-inner { padding: 0 15px; height: 60px; justify-content: space-between; }
+    .logo { font-size: 1.3rem; }
+    
+    /* --- Hero Section --- */
+    .hero-section { padding-top: 40px; min-height: auto; }
+    
+    .trust-proof { flex-direction: column; width: 100%; }
+    .proof-card { flex-direction: column; text-align: center; width: 100%; }
+
+    /* --- Audit Form (Stacked) --- */
+    .audit-form {
+        flex-direction: column;
+        background: transparent; border: none; box-shadow: none;
+        padding: 0;
+        width: 100%;
+    }
+    .audit-form input {
+        background: var(--surface);
+        border: 1px solid var(--border-color);
+        height: 50px; border-radius: 50px; margin-bottom: 10px;
+        box-shadow: var(--shadow-sm);
+        text-align: center;
+        width: 100%;
+    }
+    .audit-form button { width: 100%; height: 50px; }
+
+    /* --- Pricing Carousel (Horizontal Scroll) --- */
+    /* Mobile par grid ko flex banaya taaki swipe ho sake */
+    .pricing-grid {
+        display: flex;
+        grid-template-columns: none; /* Remove grid */
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding: 20px 5% 40px; /* Padding for shadow/bounce */
+        margin: 0 -15px; /* Bleed to edge */
+        width: calc(100% + 30px);
+        align-items: flex-start;
+    }
+    
+    .pricing-grid::-webkit-scrollbar { display: none; }
+    
+    .price-card {
+        min-width: 85%; /* Card screen ka 85% lega */
+        scroll-snap-align: center;
+        margin: 0;
+        transform: scale(0.95);
+        transition: transform 0.3s;
+    }
+    
+    .price-card.popular {
+        transform: scale(1);
+        border: 2px solid var(--primary);
+        box-shadow: 0 10px 25px rgba(37,99,235,0.15);
+    }
+
+    /* --- ROI Calculator --- */
+    .roi-calc-box { padding: 30px 20px; }
+    .calc-inputs {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .calc-result span { font-size: 2.5rem; word-wrap: break-word; }
+
+    /* --- Meet The Team --- */
+    .team-scroller {
+        padding-bottom: 30px;
+    }
+    .team-card {
+        min-width: 80%;
+        margin-right: 0;
+    }
+
+    /* --- Footer --- */
+    .site-footer { 
+        padding-top: 60px; 
+        padding-bottom: 110px; /* Extra space for Bottom Dock */
+        text-align: center; 
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack columns */
+        gap: 40px;
+        text-align: center; /* Center text */
+    }
+    
+    .social-links { justify-content: center; }
+    .footer-form { max-width: 100%; }
+    .hide-mobile { display: none; }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* --- Mobile Navigation Dock (Important) --- */
+    .mobile-dock { 
+        display: flex; /* Force show */
+        bottom: 20px; 
+        z-index: 99999;
+    }
+
+    /* --- Toast Coupon --- */
+    .toast-coupon {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100px; /* Dock ke upar */
+        width: 90%;
+        justify-content: space-between;
+        padding: 15px;
+        border-radius: 16px;
+        flex-direction: row; /* Ensure side by side */
+    }
+    
+    /* Animation Override for Mobile Centering */
+    @keyframes slideUpToast {
+        from { transform: translate(-50%, 100px); opacity: 0; }
+        to { transform: translate(-50%, 0); opacity: 1; }
+    }
+}
+
+/* --- EXTRA SMALL DEVICES (Max-width: 380px) --- */
+@media screen and (max-width: 380px) {
+    .hero-title { font-size: 1.8rem; }
+    .price-card { min-width: 90%; }
+    .dock-btn { font-size: 0.8rem; padding: 10px; }
+}
+/* =========================================
+   MOBILE AUDIT FORM HEIGHT FIX (Final)
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. Reset Container Styles */
+    .audit-form {
+        display: flex !important;
+        flex-direction: column !important; /* Ek ke neeche ek */
+        background: transparent !important; /* Desktop wala white bg hatao */
+        border: none !important; /* Desktop wala border hatao */
+        box-shadow: none !important;
+        padding: 0 20px !important; /* Side padding */
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 15px !important; /* Input aur Button ke beech gap */
+        margin: 20px auto !important;
+    }
+
+    /* 2. Fix Input Box Height & Look */
+    .audit-form input {
+        width: 100% !important;
+        height: 60px !important; /* Height Badha di (Pehle kam thi) */
+        border-radius: 12px !important; /* Thoda boxy look, zyada round nahi */
+        background: var(--surface) !important;
+        border: 1px solid var(--border-color) !important;
+        text-align: center !important; /* Text center */
+        font-size: 16px !important; /* Font readable */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+        margin: 0 !important;
+        flex: none !important; /* Width fix */
+    }
+
+    /* 3. Fix Button Height & Look */
+    .audit-form button {
+        width: 100% !important;
+        height: 60px !important; /* Input jitni height */
+        border-radius: 12px !important; /* Input jaisa shape */
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem !important;
+        margin: 0 !important;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3) !important;
+    }
+}
