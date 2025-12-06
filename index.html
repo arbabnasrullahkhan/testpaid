@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RankVantage | Premium SEO Agency</title>
+    <meta name="description" content="Rank #1 with RankVantage. Authority Backlinks, Press Releases, and Technical SEO.">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="loading">
+
+    <!-- 1. Sticky Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- 2. Skeleton Loader Overlay -->
+    <div id="skeleton-overlay">
+        <div class="skeleton-header"></div>
+        <div class="skeleton-hero"></div>
+        <div class="skeleton-grid">
+            <div class="sk-card"></div><div class="sk-card"></div><div class="sk-card"></div>
+        </div>
+    </div>
+
+    <!-- 3. Top Banner (Countdown) -->
+    <div class="top-banner">
+        <p>🔥 Special Offer ends in: <span id="countdown-timer">02:15:00</span></p>
+    </div>
+
+    <!-- 4. Header (Glassmorphism) -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="brand-icon"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                Rank<span>Vantage</span>
+            </a>
+            
+            <nav class="desktop-nav">
+                <a href="pages/services.html">Services</a>
+                <a href="pages/case-studies.html">Results</a>
+                <a href="pages/about.html">Agency</a>
+                <a href="pages/blog.html">Blog</a>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Currency Toggle UI -->
+                <div class="currency-selector">
+                    <select id="currency-switch">
+                        <option value="USD">USD ($)</option>
+                        <option value="PKR">PKR (₨)</option>
+                        <option value="GBP">GBP (£)</option>
+                    </select>
+                </div>
+                
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+
+                <!-- Desktop QR Trigger -->
+                <div class="desktop-qr-trigger">
+                    <span>Scan to Chat</span>
+                    <div class="qr-popup">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/923285796234" alt="WhatsApp QR">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 5. Hero Section (Aurora Effect) -->
+        <section class="hero-section">
+            <div class="aurora-bg"></div>
+            <div class="container hero-content reveal-up">
+                <span class="badge-pill">🚀 #1 SEO Agency for SaaS & Crypto</span>
+                <h1 class="hero-title">Dominate Google with <br><span class="typing-text">Authority</span></h1>
+                <p class="hero-desc">We build <strong>Permanent Backlinks</strong>, write <strong>Human Content</strong>, and guarantee indexing. Stop wasting money on temporary results.</p>
+                
+                <!-- Lead Gen: Audit Form -->
+                <form class="audit-form" id="auditForm">
+                    <input type="url" placeholder="Enter your website URL (e.g., mybusiness.com)" required>
+                    <button type="submit">
+                        Get Free Audit
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </form>
+
+                <!-- Trust Proof (Simulated Graph) -->
+                <div class="trust-proof">
+                    <div class="proof-card">
+                        <div class="graph-line">
+                            <svg viewBox="0 0 300 50"><path d="M0,50 Q50,45 100,30 T200,10 T300,0" fill="none" stroke="#10B981" stroke-width="3"/></svg>
+                        </div>
+                        <div class="proof-text">
+                            <strong>+450% Traffic</strong>
+                            <span>Client: FinTech Startup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Infinite Marquee (Logos) -->
+        <div class="marquee-section">
+            <div class="marquee-content">
+                <span><svg width="30" height="30" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg> Ahrefs</span>
+                <span><svg width="30" height="30" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> Semrush</span>
+                <span><svg width="30" height="30" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg> Moz</span>
+                <span><svg width="30" height="30" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg> Forbes</span>
+                <span><svg width="30" height="30" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> TechCrunch</span>
+                 <!-- Duplicate for infinite loop -->
+                <span><svg width="30" height="30" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg> Ahrefs</span>
+                <span><svg width="30" height="30" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> Semrush</span>
+            </div>
+        </div>
+
+        <!-- 7. Us vs Them (Comparison Table) -->
+        <section class="section-padding comparison-section reveal-up">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose <span class="highlight">RankVantage</span>?</h2>
+                    <p>Don't settle for cheap SEO that hurts your site.</p>
+                </div>
+                <div class="comparison-table">
+                    <div class="table-header">
+                        <div class="col-feature">Feature</div>
+                        <div class="col-us">RankVantage 🏆</div>
+                        <div class="col-them">Cheap Agencies ❌</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="col-feature">Link Type</div>
+                        <div class="col-us">Do-Follow & Permanent</div>
+                        <div class="col-them">No-Follow & Temporary</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="col-feature">Content</div>
+                        <div class="col-us">100% Human Written</div>
+                        <div class="col-them">Spun / AI Generated</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="col-feature">Indexing</div>
+                        <div class="col-us">Guaranteed (10 Days)</div>
+                        <div class="col-them">No Guarantee</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="col-feature">Reports</div>
+                        <div class="col-us">White Label Excel</div>
+                        <div class="col-them">Messy Screenshots</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Pricing Section (Toggle) -->
+        <section class="section-padding pricing-bg reveal-up" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Simple Pricing</h2>
+                    <!-- Interactive Toggle -->
+                    <div class="pricing-toggle-container">
+                        <span class="toggle-label">Monthly</span>
+                        <label class="switch">
+                            <input type="checkbox" id="pricing-toggle-checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="toggle-label">Quarterly <span class="save-badge">-20%</span></span>
+                    </div>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Starter -->
+                    <div class="price-card">
+                        <h3>Starter</h3>
+                        <div class="price-wrapper">
+                            <span class="currency">$</span><span class="amount" data-monthly="199" data-quarterly="479">199</span>
+                        </div>
+                        <ul class="features-list">
+                            <li><svg viewBox="0 0 24 24" width="16" height="16" stroke="#10B981" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 5 High DA Backlinks</li>
+                            <li><svg viewBox="0 0 24 24" width="16" height="16" stroke="#10B981" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 500 Word Content</li>
+                            <li><svg viewBox="0 0 24 24" width="16" height="16" stroke="#10B981" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Indexing Guaranteed</li>
+                        </ul>
+                        <a href="https://wa.me/923285796234?text=I%20want%20Starter%20Package" class="btn-outline">Order Now</a>
+                    </div>
+                    
+                    <!-- Growth (Popular) -->
+                    <div class="price-card popular">
+                        <div class="ribbon">Best Value</div>
+                        <h3>Growth</h3>
+                        <div class="price-wrapper">
+                            <span class="currency">$</span><span class="amount" data-monthly="499" data-quarterly="1199">499</span>
+                        </div>
+                        <ul class="features-list">
+                            <li><svg viewBox="0 0 24 24" width="16" height="16" stroke="#10B981" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 15 High DA Backlinks</li>
+                            <li><svg viewBox="0 0 24 24" width="16" height="16" stroke="#10B981" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Press Release</li>
+                            <li><svg viewBox="0 0 24 24" width="16" height="16" stroke="#10B981" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> White Label Report</li>
+                        </ul>
+                        <a href="https://wa.me/923285796234?text=I%20want%20Growth%20Package" class="btn-solid pulse-anim">Order Now</a>
+                    </div>
+
+                    <!-- Agency -->
+                    <div class="price-card">
+                        <h3>Agency</h3>
+                        <div class="price-wrapper">
+                            <span class="currency">$</span><span class="amount" data-monthly="999" data-quarterly="2399">999</span>
+                        </div>
+                        <ul class="features-list">
+                            <li><svg viewBox="0 0 24 24" width="16" height="16" stroke="#10B981" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 35 High DA Backlinks</li>
+                            <li><svg viewBox="0 0 24 24" width="16" height="16" stroke="#10B981" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated Manager</li>
+                            <li><svg viewBox="0 0 24 24" width="16" height="16" stroke="#10B981" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Daily Tracking</li>
+                        </ul>
+                        <a href="https://wa.me/923285796234?text=I%20want%20Agency%20Package" class="btn-outline">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. ROI Calculator -->
+        <section class="section-padding reveal-up">
+            <div class="container">
+                <div class="roi-calc-box">
+                    <h2>💰 ROI Calculator</h2>
+                    <p>See how much you can earn with SEO.</p>
+                    <div class="calc-inputs">
+                        <label>Current Traffic: <input type="number" id="calc-traffic" value="1000"></label>
+                        <label>Conversion Rate (%): <input type="number" id="calc-conv" value="2"></label>
+                        <label>Avg. Product Value ($): <input type="number" id="calc-val" value="50"></label>
+                    </div>
+                    <div class="calc-result">
+                        <h3>Potential Monthly Revenue:</h3>
+                        <span id="calc-total">$1,000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Meet The Team (Horizontal Scroll) -->
+        <section class="section-padding reveal-up">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet The Minds</h2>
+                </div>
+                <div class="team-scroller">
+                    <!-- Member 1 -->
+                    <div class="team-card">
+                        <div class="team-img" style="background-color:#ccc;"></div>
+                        <h4>Arbab Nasru</h4>
+                        <span>CEO & Founder</span>
+                    </div>
+                    <!-- Member 2 -->
+                    <div class="team-card">
+                        <div class="team-img" style="background-color:#bbb;"></div>
+                        <h4>Sarah L.</h4>
+                        <span>Head of SEO</span>
+                    </div>
+                    <!-- Member 3 -->
+                    <div class="team-card">
+                        <div class="team-img" style="background-color:#aaa;"></div>
+                        <h4>Mike R.</h4>
+                        <span>Content Lead</span>
+                    </div>
+                    <!-- Member 4 -->
+                    <div class="team-card">
+                        <div class="team-img" style="background-color:#999;"></div>
+                        <h4>Jenny K.</h4>
+                        <span>Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 11. FAQ Accordion -->
+        <section class="section-padding reveal-up">
+            <div class="container">
+                <div class="section-header"><h2>FAQ</h2></div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Are the backlinks permanent? <span class="arrow">+</span></button>
+                        <div class="accordion-body">Yes! We offer a 1-year guarantee on all links. If one drops, we replace it for free.</div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Do you accept Crypto/Casino? <span class="arrow">+</span></button>
+                        <div class="accordion-body">Yes, we have a specific list of domains that accept high-risk niches. Please contact support first.</div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">What is the TAT (Turn Around Time)? <span class="arrow">+</span></button>
+                        <div class="accordion-body">Usually 5-7 days for guest posts and 10 days for Press Releases.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+   <!-- 12. Premium Footer with Newsletter & Trust Signals -->
+<footer class="site-footer reveal-up">
+    <!-- Decorative Top Border -->
+    <div class="footer-border"></div>
+
+    <div class="container">
+        <div class="footer-grid">
+            
+            <!-- Column 1: Brand & Socials -->
+            <div class="footer-col brand-col">
+                <a href="#" class="footer-logo">Rank<span>Vantage</span></a>
+                <p class="footer-desc">Fueling brands with authority backlinks, premium content, and data-driven SEO strategies since 2015.</p>
+                
+                <div class="social-links">
+                    <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Services -->
+            <div class="footer-col links-col">
+                <h5>Our Services</h5>
+                <ul>
+                    <li><a href="pages/services.html">Authority Backlinks</a></li>
+                    <li><a href="pages/services.html">Guest Posting</a></li>
+                    <li><a href="pages/services.html">Press Releases</a></li>
+                    <li><a href="pages/services.html">Niche Edits</a></li>
+                    <li><a href="pages/services.html">Content Writing</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Support & Legal -->
+            <div class="footer-col links-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="pages/about.html">About Agency</a></li>
+                    <li><a href="pages/contact.html">Contact Us</a></li>
+                    <li><a href="pages/privacy.html">Privacy Policy</a></li>
+                    <li><a href="pages/terms.html">Terms of Service</a></li>
+                    <li><a href="pages/terms.html#refund">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter & Payments -->
+            <div class="footer-col newsletter-col">
+                <h5>Stay Updated</h5>
+                <p>Get SEO tips & exclusive offers.</p>
+                <form class="footer-form">
+                    <input type="email" placeholder="Enter email address" required>
+                    <button type="submit" aria-label="Subscribe">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </form>
+
+                <div class="payment-methods">
+                    <p>Secured by:</p>
+                    <div class="pay-icons">
+                        <!-- Visa -->
+                        <svg class="pay-icon" viewBox="0 0 24 24" width="32"><path fill="currentColor" d="M12.12 16.663l1.905-11.69h3.04l-1.907 11.69h-3.038zm-3.843 0l-1.397-7.078c-.053-.222-.09-.3-.243-.377C4.69 8.27 2.372 7.55 1.09 7.234l.278 1.328c.83.21 3.12 1.393 3.633 3.82l2.365 7.97h2.91zm10.59 0l-1.603-7.51c-.053-.21-.212-.41-.53-.41h-1.96l2.805 7.92h1.288zm-14.89-11.69h-4L0 5.232c2.935.753 6.32 2.652 7.352 4.09l-.91-4.63c-.158-.662-.635-1.01-1.22-1.02z"/></svg>
+                        <!-- Mastercard -->
+                        <svg class="pay-icon" viewBox="0 0 24 24" width="32"><circle cx="7" cy="12" r="7" fill="currentColor" fill-opacity="0.5"/><circle cx="17" cy="12" r="7" fill="currentColor" fill-opacity="0.5"/><path d="M12 16.5a6.5 6.5 0 0 1 0-9 6.5 6.5 0 0 1 0 9z" fill="currentColor"/></svg>
+                        <!-- Bitcoin -->
+                        <svg class="pay-icon" viewBox="0 0 24 24" width="32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 9h4.5a2.5 2.5 0 1 1 0 5H8v-5zm0 5h5.5a2.5 2.5 0 1 1 0 5H8v-5zm1-7v14m3-14v14"/></svg>
+                        <!-- USDT -->
+                        <svg class="pay-icon" viewBox="0 0 24 24" width="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M15 8.5H9m3-2v9m-4.5 4h9"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright-text">
+                &copy; 2025 RankVantage Agency. <span class="hide-mobile">All Rights Reserved.</span>
+            </div>
+            <div class="dev-credit">
+                Designed & Developed by <a href="https://Instagram.com/iam.arbabnasru" target="_blank" rel="nofollow">iam.arbabnasru</a> <span class="heart">❤️</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- 13. Mobile Bottom Glass Dock (Nav) -->
+    <div class="mobile-dock">
+        <a href="#" class="dock-btn secondary-btn" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Home</span>
+        </a>
+        <a href="https://wa.me/923285796234" class="dock-btn primary-btn pulse-anim">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            <span>Chat Now</span>
+        </a>
+    </div>
+
+    <!-- 14. Bottom "Toast" Coupon (Instead of center popup) -->
+    <div class="toast-coupon" id="toastCoupon">
+        <div class="toast-content">
+            <span class="close-toast" onclick="document.getElementById('toastCoupon').style.display='none'">&times;</span>
+            <p>🎉 Get <strong>10% OFF</strong> first order!</p>
+            <div class="code-box" onclick="navigator.clipboard.writeText('RANK10'); alert('Copied!');">RANK10</div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
